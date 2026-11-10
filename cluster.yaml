@@ -1,0 +1,16 @@
+
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: devops-eks-cluster
+  region: ap-south-1
+  version: "1.34"
+
+managedNodeGroups:
+  - name: devops-workers
+    instanceType: t3.medium
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
+    privateNetworking: false
