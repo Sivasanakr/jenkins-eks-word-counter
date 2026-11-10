@@ -81,10 +81,10 @@ pipeline {
             steps {
                 sh '''
                     kubectl apply \
-                    -f k8s/namespace.yaml
+                    -f k8/namespace.yaml
 
                     kubectl apply \
-                    -f k8s/deployment.yaml
+                    -f k8/deployment.yaml
 
                     kubectl set image \
                     deployment/${APP_NAME} \
@@ -92,7 +92,7 @@ pipeline {
                     -n ${K8S_NAMESPACE}
 
                     kubectl apply \
-                    -f k8s/service.yaml
+                    -f k8/service.yaml
                 '''
             }
         }
