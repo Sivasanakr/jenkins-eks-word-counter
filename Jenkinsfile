@@ -8,7 +8,6 @@ pipeline {
         ECR_REPOSITORY = 'word-counter'
         AWS_ACCOUNT_ID = '384875139880'
 
-'
 
         ECR_REGISTRY = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
         IMAGE_TAG = "${BUILD_NUMBER}"
